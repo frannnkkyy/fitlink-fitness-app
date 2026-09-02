@@ -1,50 +1,178 @@
-# Welcome to your Expo app 👋
+# FitLink
 
-This is an [Expo](https://expo.dev) project created with [`create-expo-app`](https://www.npmjs.com/package/create-expo-app).
+<p>
+  <img src="https://img.shields.io/badge/Status-Prototype-E7B93E?style=flat-square" alt="Prototype">
+  <img src="https://img.shields.io/badge/React_Native-Mobile-61DAFB?style=flat-square&logo=react&logoColor=white" alt="React Native">
+  <img src="https://img.shields.io/badge/Expo-Platform-000020?style=flat-square&logo=expo&logoColor=white" alt="Expo">
+  <img src="https://img.shields.io/badge/Firebase-Backend-E0A92F?style=flat-square&logo=firebase&logoColor=white" alt="Firebase">
+</p>
 
-## Get started
+Mobile fitness application developed with **React Native and Expo**, designed as a prototype for managing fitness-related information and exploring connected training experiences.
 
-1. Install dependencies
+The project combines cross-platform mobile development with Firebase services and a modular application structure.
 
-   ```bash
-   npm install
-   ```
+<p align="center">
+  <img src="./assets/images/fitlink-preview.png" width="850" alt="FitLink mobile application preview">
+</p>
 
-2. Start the app
+## Overview
 
-   ```bash
-   npx expo start
-   ```
+FitLink is a mobile application created to explore the development of a digital fitness platform using modern cross-platform technologies.
 
-In the output, you'll find options to open the app in a
+The application was built with React Native and Expo, using Expo Router for file-based navigation and Firebase for cloud-related functionality.
 
-- [development build](https://docs.expo.dev/develop/development-builds/introduction/)
-- [Android emulator](https://docs.expo.dev/workflow/android-studio-emulator/)
-- [iOS simulator](https://docs.expo.dev/workflow/ios-simulator/)
-- [Expo Go](https://expo.dev/go), a limited sandbox for trying out app development with Expo
+The project focuses on creating a structured mobile experience while applying concepts such as reusable components, navigation, cloud integration and mobile interface development.
 
-You can start developing by editing the files inside the **app** directory. This project uses [file-based routing](https://docs.expo.dev/router/introduction).
+## Implemented features
 
-## Get a fresh project
+### Mobile experience
 
-When you're ready, run:
+- Cross-platform mobile interface
+- Fitness-oriented application screens
+- File-based navigation with Expo Router
+- Reusable React Native components
+- Mobile-focused layouts and interactions
+- Organized application navigation
 
-```bash
-npm run reset-project
-```
+### Application functionality
 
-This command will move the starter code to the **app-example** directory and create a blank **app** directory where you can start developing.
+- Firebase integration
+- Cloud-based application configuration
+- Modular component architecture
+- Custom React hooks
+- Shared application constants
+- Static asset management
+- Expo development environment
 
-## Learn more
+## Technology stack
 
-To learn more about developing your project with Expo, look at the following resources:
+| Area | Technologies |
+|---|---|
+| Mobile application | React Native |
+| Development platform | Expo |
+| Navigation | Expo Router |
+| Cloud services | Firebase |
+| Languages | JavaScript, TypeScript |
+| Development | Node.js, npm, Git |
 
-- [Expo documentation](https://docs.expo.dev/): Learn fundamentals, or go into advanced topics with our [guides](https://docs.expo.dev/guides).
-- [Learn Expo tutorial](https://docs.expo.dev/tutorial/introduction/): Follow a step-by-step tutorial where you'll create a project that runs on Android, iOS, and the web.
+## Project structure
 
-## Join the community
+    fitlink/
+    ├── app/                    # Application screens and routes
+    ├── assets/                 # Images and static resources
+    ├── components/             # Reusable React Native components
+    ├── constants/              # Shared application constants
+    ├── hooks/                  # Custom React hooks
+    ├── scripts/                # Development utilities
+    ├── firebaseConfig.js       # Firebase configuration
+    ├── app.json                # Expo application configuration
+    ├── eslint.config.js        # ESLint configuration
+    ├── package.json            # Dependencies and scripts
+    ├── package-lock.json
+    ├── tsconfig.json           # TypeScript configuration
+    └── README.md
 
-Join our community of developers creating universal apps.
+## Getting started
 
-- [Expo on GitHub](https://github.com/expo/expo): View our open source platform and contribute.
-- [Discord community](https://chat.expo.dev): Chat with Expo users and ask questions.
+### Requirements
+
+Install the following software before running the project:
+
+- Node.js
+- npm
+- Git
+- Expo Go or a compatible emulator
+
+### Installation
+
+Clone the repository:
+
+    git clone https://github.com/frannnkkyy/fitlink.git
+
+Open the project:
+
+    cd fitlink
+
+Install the dependencies:
+
+    npm install
+
+Start the Expo development server:
+
+    npx expo start
+
+The Expo development environment provides options to run the application using:
+
+- Expo Go
+- Android Emulator
+- iOS Simulator
+- Development Build
+- Web browser
+
+## Firebase configuration
+
+The project includes Firebase integration through `firebaseConfig.js`.
+
+For a public repository, Firebase configuration and other environment-specific values should be handled through environment variables when appropriate.
+
+Sensitive credentials or administrative secrets should never be committed to the repository.
+
+## Architecture
+
+FitLink follows the file-based routing architecture provided by Expo Router.
+
+Application screens are organized inside the `app` directory, while reusable interface elements are separated into `components`.
+
+Custom application logic can be organized through `hooks`, while shared configuration and application values are maintained separately through `constants`.
+
+This structure helps separate navigation, interface components and application logic as the project grows.
+
+## Current limitations
+
+This repository represents a prototype and is not intended as a production-ready fitness platform.
+
+- The application is currently presented as a development prototype
+- Production deployment has not been documented
+- Automated tests are not currently documented
+- Some functionality may require Firebase configuration
+- Additional fitness and connected-device functionality can be expanded in future versions
+
+## Roadmap
+
+- [ ] Expand workout and fitness management features
+- [ ] Improve user profile functionality
+- [ ] Add training progress visualization
+- [ ] Expand Firebase data integration
+- [ ] Add automated testing
+- [ ] Improve application error handling
+- [ ] Document Firebase configuration with `.env.example`
+- [ ] Add additional fitness statistics
+- [ ] Expand connected fitness / IoT functionality
+- [ ] Prepare a production mobile build
+
+## What I learned
+
+This project helped me practice:
+
+- Developing cross-platform applications with React Native
+- Working with the Expo development ecosystem
+- Implementing file-based navigation with Expo Router
+- Structuring mobile applications with reusable components
+- Integrating Firebase into a mobile project
+- Organizing application logic with React hooks
+- Managing mobile application assets and configuration
+- Using Git and GitHub for version control
+
+## Author
+
+**Carlos Constantino**
+
+- Portfolio: [portafoliofrann.netlify.app](https://portafoliofrann.netlify.app/)
+- LinkedIn: [linkedin.com/in/fcoocarlos](https://www.linkedin.com/in/fcoocarlos/)
+- GitHub: [github.com/frannnkkyy](https://github.com/frannnkkyy)
+
+## Project status
+
+FitLink is a prototype developed for learning, experimentation and portfolio demonstration.
+
+The repository showcases the mobile development architecture, React Native implementation, Expo ecosystem and Firebase integration explored during the project.
