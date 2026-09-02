@@ -1,63 +1,91 @@
-# FitLink
+# FitLink — IoT Wearable & Mobile Health Application
 
 <p>
   <img src="https://img.shields.io/badge/Status-Prototype-E7B93E?style=flat-square" alt="Prototype">
   <img src="https://img.shields.io/badge/React_Native-Mobile-61DAFB?style=flat-square&logo=react&logoColor=white" alt="React Native">
   <img src="https://img.shields.io/badge/Expo-Platform-000020?style=flat-square&logo=expo&logoColor=white" alt="Expo">
-  <img src="https://img.shields.io/badge/Firebase-Backend-E0A92F?style=flat-square&logo=firebase&logoColor=white" alt="Firebase">
+  <img src="https://img.shields.io/badge/Arduino-Wearable-00878F?style=flat-square&logo=arduino&logoColor=white" alt="Arduino">
+  <img src="https://img.shields.io/badge/Firebase-Realtime_Database-E0A92F?style=flat-square&logo=firebase&logoColor=white" alt="Firebase">
+  <img src="https://img.shields.io/badge/IoT-Connected_Device-4C8BF5?style=flat-square" alt="IoT">
 </p>
 
-Mobile fitness application developed with **React Native and Expo**, designed as a prototype for managing fitness-related information and exploring connected training experiences.
+Mobile IoT application connected to an **Arduino-based wearable device** for monitoring health and activity information, including steps, BPM, blood pressure and blood oxygen measurements.
 
-The project combines cross-platform mobile development with Firebase services and a modular application structure.
+FitLink combines mobile development, sensors and Firebase Realtime Database to synchronize wearable measurements with a mobile application, visualize health data and review previous measurement sessions.
 
 
 ## Overview
 
-FitLink is a mobile application created to explore the development of a digital fitness platform using modern cross-platform technologies.
+FitLink is a mobile application and wearable-device prototype designed to explore the integration of mobile software with IoT hardware and health-related sensors.
 
-The application was built with React Native and Expo, using Expo Router for file-based navigation and Firebase for cloud-related functionality.
+The project connects an Arduino-based wearable with a mobile application that displays activity and measurement information. Firebase Realtime Database is used to manage synchronized data between the application and the connected system.
 
-The project focuses on creating a structured mobile experience while applying concepts such as reusable components, navigation, cloud integration and mobile interface development.
+The application provides access to step count, BPM, blood pressure and blood oxygen information, as well as charts for pulse and oxygen measurements and a session history for reviewing previous records.
 
 ## Implemented features
 
-### Mobile experience
+### Mobile application
 
-- Cross-platform mobile interface
-- Fitness-oriented application screens
-- File-based navigation with Expo Router
-- Reusable React Native components
-- Mobile-focused layouts and interactions
-- Organized application navigation
+- Mobile interface for health and activity information
+- Step count visualization
+- BPM monitoring
+- Blood pressure measurements
+- Blood oxygen measurements
+- Pulse data visualization
+- Blood oxygen charts
+- Historical measurement sessions
+- Navigation between application sections
 
-### Application functionality
+### IoT and data integration
 
-- Firebase integration
-- Cloud-based application configuration
-- Modular component architecture
-- Custom React hooks
-- Shared application constants
-- Static asset management
-- Expo development environment
+- Arduino-based wearable integration
+- Health and activity sensor integration
+- Firebase Realtime Database
+- Synchronization of wearable measurements with the mobile application
+- Storage of measurement sessions
+- Retrieval of previous measurements
+- Frontend and backend functionality for the connected application
 
 ## Technology stack
 
 | Area | Technologies |
 |---|---|
-| Mobile application | React Native |
-| Development platform | Expo |
+| Mobile application | React Native, Expo |
+| IoT hardware | Arduino-based wearable |
+| Data and backend | Firebase Realtime Database |
+| Hardware integration | Sensors |
 | Navigation | Expo Router |
-| Cloud services | Firebase |
 | Languages | JavaScript, TypeScript |
 | Development | Node.js, npm, Git |
+
+## System architecture
+
+FitLink connects a wearable device with a mobile application through a cloud-based data layer.
+
+    Wearable sensors
+          │
+          ▼
+    Arduino-based device
+          │
+          ▼
+    Firebase Realtime Database
+          │
+          ▼
+    FitLink mobile application
+          │
+          ├── Activity information
+          ├── Health measurements
+          ├── Pulse and oxygen charts
+          └── Session history
+
+The wearable collects health and activity information, while Firebase Realtime Database provides the data layer used by the mobile application to access and display measurements.
 
 ## Project structure
 
     fitlink/
     ├── app/                    # Application screens and routes
     ├── assets/                 # Images and static resources
-    ├── components/             # Reusable React Native components
+    ├── components/             # Reusable mobile components
     ├── constants/              # Shared application constants
     ├── hooks/                  # Custom React hooks
     ├── scripts/                # Development utilities
@@ -73,12 +101,14 @@ The project focuses on creating a structured mobile experience while applying co
 
 ### Requirements
 
-Install the following software before running the project:
+Install the following software before running the mobile project:
 
 - Node.js
 - npm
 - Git
 - Expo Go or a compatible emulator
+
+A Firebase project is also required for the application's data functionality.
 
 ### Installation
 
@@ -98,67 +128,73 @@ Start the Expo development server:
 
     npx expo start
 
-The Expo development environment provides options to run the application using:
-
-- Expo Go
-- Android Emulator
-- iOS Simulator
-- Development Build
-- Web browser
+The application can then be opened using Expo Go or a compatible development environment.
 
 ## Firebase configuration
 
-The project includes Firebase integration through `firebaseConfig.js`.
+FitLink uses Firebase Realtime Database for application data and synchronization.
 
-For a public repository, Firebase configuration and other environment-specific values should be handled through environment variables when appropriate.
+The repository includes Firebase configuration through `firebaseConfig.js`. Environment-specific configuration should be kept outside the public source code when preparing the project for production.
 
 Sensitive credentials or administrative secrets should never be committed to the repository.
 
-## Architecture
+## Wearable integration
 
-FitLink follows the file-based routing architecture provided by Expo Router.
+The mobile application was developed alongside an Arduino-based wearable device.
 
-Application screens are organized inside the `app` directory, while reusable interface elements are separated into `components`.
+The connected system integrates sensor measurements used by FitLink to display:
 
-Custom application logic can be organized through `hooks`, while shared configuration and application values are maintained separately through `constants`.
+- Step count
+- BPM
+- Blood pressure
+- Blood oxygen
 
-This structure helps separate navigation, interface components and application logic as the project grows.
+The application also provides pulse and oxygen charts and stores measurement sessions so previous information can be reviewed.
 
 ## Current limitations
 
-This repository represents a prototype and is not intended as a production-ready fitness platform.
+This repository represents a prototype and is not intended to be used as a certified medical system.
 
-- The application is currently presented as a development prototype
-- Production deployment has not been documented
+- The project was developed as an IoT and mobile application prototype
+- Health measurements are presented as information from the connected prototype
+- The system is not intended for medical diagnosis
+- Production deployment has not been configured
 - Automated tests are not currently documented
-- Some functionality may require Firebase configuration
-- Additional fitness and connected-device functionality can be expanded in future versions
+- Hardware operation requires the corresponding wearable prototype and sensors
 
 ## Roadmap
 
-- [ ] Expand workout and fitness management features
-- [ ] Improve user profile functionality
-- [ ] Add training progress visualization
-- [ ] Expand Firebase data integration
-- [ ] Add automated testing
+- [ ] Improve wearable-to-application communication
+- [ ] Expand health and activity visualization
+- [ ] Improve historical measurement analysis
+- [ ] Add additional charts and statistics
 - [ ] Improve application error handling
-- [ ] Document Firebase configuration with `.env.example`
-- [ ] Add additional fitness statistics
-- [ ] Expand connected fitness / IoT functionality
+- [ ] Add automated tests
+- [ ] Move Firebase configuration to environment variables
+- [ ] Document the wearable hardware setup
+- [ ] Document sensor connections and configuration
 - [ ] Prepare a production mobile build
 
 ## What I learned
 
 This project helped me practice:
 
-- Developing cross-platform applications with React Native
-- Working with the Expo development ecosystem
-- Implementing file-based navigation with Expo Router
-- Structuring mobile applications with reusable components
-- Integrating Firebase into a mobile project
-- Organizing application logic with React hooks
-- Managing mobile application assets and configuration
+- Developing a mobile application connected to IoT hardware
+- Integrating an Arduino-based wearable with software services
+- Working with health and activity sensors
+- Developing frontend and backend functionality for a connected application
+- Using Firebase Realtime Database
+- Synchronizing data between hardware and a mobile interface
+- Visualizing pulse and blood oxygen information
+- Managing historical measurement sessions
+- Structuring a mobile application with reusable components
 - Using Git and GitHub for version control
+
+## Project context
+
+FitLink was developed in 2025 as a mobile and IoT software project.
+
+The repository demonstrates the integration of mobile development, Firebase Realtime Database, Arduino-based hardware and sensors through a wearable companion application.
 
 ## Author
 
@@ -170,6 +206,6 @@ This project helped me practice:
 
 ## Project status
 
-FitLink is a prototype developed for learning, experimentation and portfolio demonstration.
+FitLink is a functional prototype developed for learning and portfolio demonstration.
 
-The repository showcases the mobile development architecture, React Native implementation, Expo ecosystem and Firebase integration explored during the project.
+The project showcases mobile development, IoT integration, Firebase data management and the connection between a wearable device and a mobile application.
