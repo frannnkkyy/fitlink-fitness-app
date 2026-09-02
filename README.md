@@ -11,9 +11,6 @@ Mobile fitness application developed with **React Native and Expo**, designed as
 
 The project combines cross-platform mobile development with Firebase services and a modular application structure.
 
-<p align="center">
-  <img src="./assets/images/fitlink-preview.png" width="850" alt="FitLink mobile application preview">
-</p>
 
 ## Overview
 
